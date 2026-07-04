@@ -1,0 +1,17 @@
+[config]
+
+[config.wallpaper]
+set = true
+command = "awww img {{image}} --transition-type wipe --transition-duration 1"
+
+[templates.kitty]
+input_path = '~/Projects/lopshell/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors-matugen.conf'
+
+[templates.gtk3]
+input_path = '~/Projects/lopshell/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+
+[templates.gtk4]
+input_path = '~/Projects/lopshell/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-4.0/colors.css'
