@@ -15,3 +15,8 @@ output_path = '~/.config/gtk-3.0/colors.css'
 [templates.gtk4]
 input_path = '~/Projects/lopshell/matugen/templates/gtk-colors.css'
 output_path = '~/.config/gtk-4.0/colors.css'
+
+[templates.hypr]
+input_path = '~/Projects/lopshell/matugen/templates/hypr-colors.lua'
+output_path = '~/.config/hypr/config/colors.lua'
+post_hook = 'hyprctl reload'
