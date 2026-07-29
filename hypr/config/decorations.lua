@@ -38,8 +38,9 @@ hl.config({
         fullscreen_opacity = 0.95,
         blur = {
             size = 3,
-            passes = 3,
-            special = true,
-        },
+            passes = 2,
+            xray = true,
+            new_optimizations = true,
+        }
     },
 })
