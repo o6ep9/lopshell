@@ -14,7 +14,7 @@ hl.config({
 hl.device({
 	name = "elan0678:00-04f3:3195-touchpad",
 	accel_profile = "adaptive",
-	sensitivity = 0.0
+	sensitivity = 0.1
 })
 
 
