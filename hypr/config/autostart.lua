@@ -7,6 +7,6 @@ hl.on("hyprland.start", function ()
     -- this is how noctalia-shell works 
     -- hl.exec_cmd("qs -c noctalia-shell")
     hl.exec_cmd("waybar")
-    hl.exec_cmd("swayosd-server")
+    hl.exec_cmd("bash -c 'swayosd-server >/dev/null 2>&1'")
     hl.exec_cmd("xhost +SI:localuser:root")
 end)
