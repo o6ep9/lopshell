@@ -70,8 +70,8 @@ hl.window_rule({
 -- Opacity Overrides
 local terminals = "^(kitty|ghostty|[Kk]onsole|Alacritty|gnome-terminal|xfce[0-9]?-terminal)$"
 
-hl.window_rule({ match = { class = "^(firefox|zen)$" }, opacity = "1.0 override" })
-hl.window_rule({ match = { class = terminals }, opacity = "1.0 override" }) -- override opacity in favor of terminal settings for opacity
+hl.window_rule({ match = { class = "^(firefox|zen|brave)$" }, opacity = "1.0 override" })
+hl.window_rule({ match = { class = terminals }, opacity = "0.95 0.92" }) -- override opacity in favor of terminal settings for opacity
 hl.window_rule({ match = { class = "^(mpv|org.kde.haruna|.*plex.*|org\\.kde\\.gwenview|.*vlc.*)$" }, opacity = "1.0 override" })
 
 -- Float Utility Windows
