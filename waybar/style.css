@@ -35,3 +35,15 @@ window#waybar {
 #battery.warning  { color: @secondary; }
 #battery.critical { color: @error; }
 #temperature.critical { color: @error; }
+
+tooltip {
+  background: alpha(@surface, 0.92);
+  border: 1px solid @outline;
+  border-radius: 0;
+}
+
+tooltip label {
+  color: @on_surface;
+  font-family: "Iosevka Nerd Font Mono";
+  padding: 4px;
+}

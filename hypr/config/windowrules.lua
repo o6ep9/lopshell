@@ -119,3 +119,11 @@ hl.window_rule({
 
     no_focus = true,
 })
+
+-- Выпадающие TUI-панели из waybar
+hl.window_rule({
+    match = { class = "^(volume-tui)$" },
+    float = true,
+    size  = "480 420",
+    move  = "100%-490 34",
+})
