@@ -4,7 +4,7 @@ hl.config({
     input = {
         accel_profile = "flat",
 	kb_layout = "us,ru",
-        kb_options = "grp:lalt_lshift_toggle",
+        kb_options = "grp:caps_toggle",
         touchpad = {
             natural_scroll = true,
         },
