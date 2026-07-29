@@ -4,13 +4,23 @@
   "height": 26,
   "spacing": 0,
 
-  "modules-left":   ["clock", "cpu", "temperature"],
+  "modules-left":   ["clock", "cpu", "temperature", "custom/language"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right":  ["custom/notify", "pulseaudio", "backlight", "battery", "custom/lobster"],
 
   "clock": {
-    "format": " {:%H:%M %d.%m.%Y} ",
-    "tooltip-format": "<tt>{calendar}</tt>"
+    "locale": "en_US.UTF-8",
+    "interval": 1,
+    "format": " {:%H:%M:%S | %d.%m.%y} ",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "format": {
+        "today": "<b>{}</b>",
+        "days": "{}",
+        "weekdays": "<span color='#888888'>{}</span>"
+      }
+    }
   },
 
   "cpu": {
@@ -19,9 +29,14 @@
   },
 
   "temperature": {
-    "format": "- {temperatureC}°C  ",
+    "format": "| {temperatureC}°C  ",
     "critical-threshold": 85,
-    "format-critical": "- {temperatureC}°C !"
+    "format-critical": "| {temperatureC}°C !  "
+  },
+
+  "custom/language": {
+    "exec": "~/.config/waybar/scripts/language.sh",
+    "tooltip": false
   },
 
   "hyprland/workspaces": {
@@ -37,24 +52,27 @@
   },
 
   "pulseaudio": {
-    "format": "  {volume}% ",
-    "format-muted": "  --  ",
-    "on-click": "pavucontrol"
+    "format": " |  ♪ {volume}",
+    "format-muted": " |  ♪ 00",
+    "on-click": "kitty --class volume-tui -e wiremix"
   },
 
   "backlight": {
-    "format": "  {percent}% "
+    "format": " | ★  {percent} "
   },
 
   "battery": {
+    "interval": 5,
     "format": " [ {capacity} % ] ",
-    "format-charging": " [+{capacity} % ] ",
+    "format-charging": " [ + {capacity} % ] ",
+    "tooltip-format": "{timeTo}\n{power} W",
+    "on-click": "bash ~/.config/hypr/scripts/toggle-charge-mode.sh",
     "states": { "warning": 20, "critical": 10 }
   },
 
   "custom/lobster": {
     "format": " 🦞 ",
-    "on-click": "qs -c noctalia-shell ipc call settings toggle",
+    "on-click": "",
     "tooltip": false
   }
 }
