@@ -6,7 +6,7 @@
 
   "modules-left":   ["clock", "cpu", "temperature", "custom/language"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right":  ["custom/notify", "pulseaudio", "backlight", "battery", "custom/lobster"],
+  "modules-right":  ["pulseaudio", "backlight", "battery", "custom/lobster"],
 
   "clock": {
     "locale": "en_US.UTF-8",
@@ -24,7 +24,7 @@
   },
 
   "cpu": {
-    "format": " cpu {usage}% ",
+    "format": " {usage} % ",
     "interval": 2
   },
 
@@ -44,21 +44,21 @@
     "on-click": "activate"
   },
 
-  "custom/notify": {
-    "exec": "swaync-client -swb",
-    "return-type": "json",
-    "on-click": "swaync-client -t",
-    "escape": true
-  },
+  // "custom/notify": {
+  //   "exec": "swaync-client -swb",
+  //   "return-type": "json",
+  //   "on-click": "swaync-client -t",
+  //   "escape": true
+  // },
 
   "pulseaudio": {
-    "format": " |  ♪ {volume}",
-    "format-muted": " |  ♪ 00",
+    "format": "   ♪ {volume}",
+    "format-muted": "  ♪ 00",
     "on-click": "kitty --class volume-tui -e wiremix"
   },
 
   "backlight": {
-    "format": " | ★  {percent} "
+    "format": " | ★ {percent}  "
   },
 
   "battery": {
