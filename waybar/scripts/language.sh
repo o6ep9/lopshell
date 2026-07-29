@@ -2,8 +2,8 @@
 render() {
   km=$(hyprctl -j devices | jq -r '.keyboards[] | select(.main == true) | .active_keymap')
   case "$km" in
-    Russian*) echo " ru " ;;
-    *)        echo " en " ;;
+    Russian*) echo " [ ru ] " ;;
+    *)        echo " [ en ] " ;;
   esac
 }
 render
