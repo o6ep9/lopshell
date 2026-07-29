@@ -4,6 +4,8 @@
 hl.on("hyprland.start", function ()
     hl.exec_cmd("dbus-update-activation-environment --systemd --all")
     hl.exec_cmd("awww-daemon")
-    hl.exec_cmd("qs -c noctalia-shell")
+    -- this is how noctalia-shell works 
+    -- hl.exec_cmd("qs -c noctalia-shell")
+    hl.exec_cmd("waybar")
     hl.exec_cmd("xhost +SI:localuser:root")
 end)

@@ -1,0 +1,60 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 26,
+  "spacing": 0,
+
+  "modules-left":   ["clock", "cpu", "temperature"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right":  ["custom/notify", "pulseaudio", "backlight", "battery", "custom/lobster"],
+
+  "clock": {
+    "format": " {:%H:%M %d.%m.%Y} ",
+    "tooltip-format": "<tt>{calendar}</tt>"
+  },
+
+  "cpu": {
+    "format": " cpu {usage}% ",
+    "interval": 2
+  },
+
+  "temperature": {
+    "format": "- {temperatureC}°C  ",
+    "critical-threshold": 85,
+    "format-critical": "- {temperatureC}°C !"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate"
+  },
+
+  "custom/notify": {
+    "exec": "swaync-client -swb",
+    "return-type": "json",
+    "on-click": "swaync-client -t",
+    "escape": true
+  },
+
+  "pulseaudio": {
+    "format": "  {volume}% ",
+    "format-muted": "  --  ",
+    "on-click": "pavucontrol"
+  },
+
+  "backlight": {
+    "format": "  {percent}% "
+  },
+
+  "battery": {
+    "format": " [ {capacity} % ] ",
+    "format-charging": " [+{capacity} % ] ",
+    "states": { "warning": 20, "critical": 10 }
+  },
+
+  "custom/lobster": {
+    "format": " 🦞 ",
+    "on-click": "qs -c noctalia-shell ipc call settings toggle",
+    "tooltip": false
+  }
+}
